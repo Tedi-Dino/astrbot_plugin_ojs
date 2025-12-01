@@ -1,8 +1,6 @@
-# helloworld
+# Ojisan
 
-AstrBot 插件模板
-
-A template plugin for AstrBot plugin feature
+写点什么吗？一会再说吧。
 
 # 支持
 
