@@ -1,0 +1,35 @@
+{
+  "target_groups": {
+    "description": "开启功能的群组 ID 列表",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "输入群号字符串"
+  },
+  "target_users": {
+    "description": "触发回复的目标用户 ID (QQ号) 列表",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": [],
+    "hint": "输入用户的 QQ 号"
+  },
+  "reply_probability": {
+    "description": "触发回复的概率 (0.0 - 1.0)",
+    "type": "float",
+    "default": 0.2,
+    "hint": "例如 0.2 代表 20% 的概率触发"
+  },
+  "reply_list": {
+    "description": "随机回复的内容库",
+    "type": "list",
+    "items": {
+      "type": "string"
+    },
+    "default": ["你好！", "非常有道理", "确实如此"],
+    "hint": "机器人将从中随机抽取一句发送"
+  }
+}
