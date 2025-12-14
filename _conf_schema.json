@@ -1,35 +1,47 @@
 {
-  "target_groups": {
-    "description": "开启功能的群组 ID 列表",
+  "group_configs": {
+    "description": "多群独立配置列表",
     "type": "list",
+    "hint": "点击加号添加一个群的配置",
     "items": {
-      "type": "string"
-    },
-    "default": [],
-    "hint": "输入群号字符串"
+      "type": "object",
+      "description": "单个群配置",
+      "items": {
+        "group_id": {
+          "description": "群号",
+          "type": "string",
+          "hint": "生效的群号"
+        },
+        "target_users": {
+          "description": "目标用户列表",
+          "type": "list",
+          "items": { "type": "string" },
+          "hint": "QQ号列表"
+        },
+        "reply_probability": {
+          "description": "触发概率 (0.0 - 1.0)",
+          "type": "float",
+          "default": 0.2
+        },
+        "limit_once_per_day": {
+          "description": "每日仅触发一次 (04:00刷新)",
+          "type": "bool",
+          "default": false,
+          "hint": "开启后，该规则每天最多生效一次"
+        },
+        "reply_list": {
+          "description": "回复内容列表",
+          "type": "list",
+          "items": { "type": "string" },
+          "default": ["收到", "确实"]
+        }
+      }
+    }
   },
-  "target_users": {
-    "description": "触发回复的目标用户 ID (QQ号) 列表",
-    "type": "list",
-    "items": {
-      "type": "string"
-    },
-    "default": [],
-    "hint": "输入用户的 QQ 号"
-  },
-  "reply_probability": {
-    "description": "触发回复的概率 (0.0 - 1.0)",
-    "type": "float",
-    "default": 0.2,
-    "hint": "例如 0.2 代表 20% 的概率触发"
-  },
-  "reply_list": {
-    "description": "随机回复的内容库",
-    "type": "list",
-    "items": {
-      "type": "string"
-    },
-    "default": ["你好！", "非常有道理", "确实如此"],
-    "hint": "机器人将从中随机抽取一句发送"
+  "max_per_minute": {
+    "description": "单群每分钟最大回复数",
+    "type": "int",
+    "default": 10,
+    "hint": "全局频率限制，防止刷屏"
   }
 }
