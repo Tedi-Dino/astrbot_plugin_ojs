@@ -1,6 +1,6 @@
 name: astrbot_plugin_ojs
-display_name: Ojisan Reply (大叔回复/特定触发)
-desc: 一个有趣的群聊互动插件。支持多群组独立配置，监听特定“群友”发言并概率触发回复。内置每日限制(04:00刷新)、防刷屏机制。
+display_name: Ojisan Reply (特定回复/迫害群友)
+desc: 一个简单的群聊插件，用来蹲点回复特定群友的发言。支持每日限制（防止太烦人）和防刷屏功能。
 version: v1.3.0
 author: Tedi-Dino
 repo: https://github.com/Tedi-Dino/astrbot_plugin_ojs
