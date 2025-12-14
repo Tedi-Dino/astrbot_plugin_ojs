@@ -2,6 +2,7 @@
 
 一个简单好用的 AstrBot 插件，专门用来“蹲点”回复特定群友的发言。  
 不管是复读、玩梗，还是每日打卡，这个插件都能搞定。  
+
 灵感来自群友，代码来自 AI, 但本人测试可用。感谢 Gemini 3 pro。  
 本人非专业人士，代码和 Git 都是门外汉，不足之处请谅解。  
 
@@ -14,13 +15,13 @@
 
 ## 📦 怎么安装？
 
-1.  在astrbot插件商店安装。
-2.  备用方案：把插件下载到你的 AstrBot 插件目录（一般是 `data/plugins`）：
+1.  **推荐**：在 AstrBot 插件商店搜索 `ojisan` 或 `astrbot_plugin_ojs` 直接安装。
+2.  **备用方案**：把插件下载到你的 AstrBot 插件目录（一般是 `data/plugins`）：
     ```bash
     cd data/plugins
     git clone [https://github.com/Tedi-Dino/astrbot_plugin_ojs.git](https://github.com/Tedi-Dino/astrbot_plugin_ojs.git)
     ```
-    然后重载即可
+    然后重启 AstrBot 或重载插件即可。
 
 ## ⚙️ 配置建议（避坑指南）
 
@@ -32,9 +33,9 @@
 **😎 推荐做法：**
 1.  在 WebUI 里随便填个配置保存一下，生成配置文件。
 2.  直接去后台找到 `data/config/astrbot_plugin_ojs_config.json`。
-3.  复制下面的模板，改改群号和 QQ 号，直接粘贴进去保存。
+3.  复制下面的模板，改改群号、QQ 号和**回复内容**，直接粘贴进去保存。
 
-### 配置模板参考
+### 📌 配置模板参考
 
 ```json
 {
@@ -44,14 +45,23 @@
       "target_users": ["10086"],
       "reply_probability": 1.0,
       "limit_once_per_day": true,
-      "_comment": "这是一个每日限制规则，每天凌晨4点刷新，适合周更梗"
+      "reply_list": [
+        "这是你要回复的内容",
+        "或者二选一"
+      ],
+      "_comment": "示例1：每日限制规则，每天凌晨4点刷新，适合周更梗"
     },
     {
       "group_id": "87654321",
       "target_users": ["10010"],
       "reply_probability": 0.01,
       "limit_once_per_day": false,
-      "_comment": "这是一个低概率彩蛋，没有每日限制"
+      "reply_list": [
+        "第一句话",
+        "第二句话",
+        "三选一随机发送"
+      ],
+      "_comment": "示例2：低概率彩蛋，无每日限制，随机抽取列表中的一句回复"
     }
   ],
   "max_per_minute": 10
