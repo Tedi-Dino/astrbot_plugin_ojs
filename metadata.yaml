@@ -1,6 +1,7 @@
-name: astrbot_plugin_ojs # 插件唯一识别名，以 astrbot_plugin_ 前缀开头
-display_name: ojisan # 用于展示的名字，可以是方便人类阅读的名字（需要版本 >= v4.5.0，低版本不会报错，请放心填写）
-desc: 在特定群聊某人发言后概率触发列表内的回复。 # 插件简短描述
-version: v0.1 # 插件版本号。格式：v1.1.1 或者 v1.1
-author: Tedi-Dino # 作者
-repo: https://github.com/Tedi-Dino/astrbot_plugin_ojs # 插件的仓库地址
+name: astrbot_plugin_ojs
+display_name: Ojisan Reply (大叔回复/特定触发)
+desc: 一个有趣的群聊互动插件。支持多群组独立配置，监听特定“群友”发言并概率触发回复。内置每日限制(04:00刷新)、防刷屏机制。
+version: v1.3.0
+author: Tedi-Dino
+repo: https://github.com/Tedi-Dino/astrbot_plugin_ojs
+url: https://github.com/Tedi-Dino/astrbot_plugin_ojs
