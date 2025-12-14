@@ -1,8 +1,14 @@
 {
+  "00_tip": {
+    "description": "🔴 强烈建议：多群组复杂配置请直接修改 data/config/astrbot_plugin_ojs_config.json 文件，比在网页点点点更方便！详见：github.com/Tedi-Dino/astrbot_plugin_ojs/blob/master/README.md",
+    "type": "string",
+    "default": "请阅读上方红色提示",
+    "obvious_hint": true
+  },
   "group_configs": {
-    "description": "多群独立配置列表",
+    "description": "多群独立配置列表 (点击加号添加)",
     "type": "list",
-    "hint": "点击加号添加一个群的配置",
+    "hint": "建议直接去后台改 JSON 文件",
     "items": {
       "type": "object",
       "description": "单个群配置",
@@ -15,7 +21,9 @@
         "target_users": {
           "description": "目标用户列表",
           "type": "list",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "hint": "QQ号列表"
         },
         "reply_probability": {
@@ -32,8 +40,13 @@
         "reply_list": {
           "description": "回复内容列表",
           "type": "list",
-          "items": { "type": "string" },
-          "default": ["收到", "确实"]
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "收到",
+            "确实"
+          ]
         }
       }
     }
